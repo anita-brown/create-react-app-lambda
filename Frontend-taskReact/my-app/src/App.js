@@ -15,7 +15,7 @@ function App() {
       {/* <Layout/> */}
       {/* <About /> */}
       {/* <Contributors/>*/}
-      <UserProfile/>
+      {/* <UserProfile/> */}
       <Footer/>
     </React.Fragment>
   );

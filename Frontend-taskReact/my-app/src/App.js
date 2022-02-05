@@ -7,18 +7,26 @@ import Contributors from './components/Contributors';
 import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
 import Repository from './components/Repository';
-
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
-      {/* <Layout/> */}
-      {/* <About /> */}
-      {/* <Contributors/>*/}
-      {/* <UserProfile/> */}
-      <Repository/>
-      <Footer/>
+      <Router>
+        <Routes>
+          <Route  path="/" element={<Navbar />} />
+          <Route  path="/" element={<Contributors />} />
+
+          <Route path="/" element={<Footer />} />
+
+          {/* <Layout/> */}
+          {/* <About /> */}
+          {/* <Contributors/> */}
+          {/* <UserProfile/> */}
+          <Repository />
+          <Footer />
+        </Routes>
+      </Router>
     </React.Fragment>
   );
 }

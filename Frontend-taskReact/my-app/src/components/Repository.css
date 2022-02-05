@@ -1,0 +1,84 @@
+.repo-container{
+    display: flex;
+    width: auto;
+    gap: 1.1rem;
+    height: 5rem;
+    background-color: rgba(202, 201, 201, 0.952);
+}
+.repo-name{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+}
+.repo-name span {
+    font-weight: 600;
+}
+.img-profile{
+    display:flex;
+    gap: 1rem;
+}
+.img-profile p {
+    margin-top: 2rem;
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.img-profile span {
+    font-weight: 600;
+}
+.name {
+    margin-top:2rem;
+}
+.repository-flex {
+    display: flex;
+}
+.heading-primary {
+    height: 0.8rem;
+    width: auto;
+    /* display: flex;
+    justify-content: space-around; */
+}
+.heading-secondary {
+    margin: 1rem;;
+}
+.one {
+
+}
+.new{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25.6rem;
+    
+    /* margin-top: -2rem; */
+   
+}
+.box{
+    width: 75rem;
+    height: 35rem;
+}
+.img {
+    height: 35rem;
+}
+.lang {
+    font-size: 1.3rem;
+    font-weight: 550;
+    margin-top: 10rem;
+    margin-left: 2rem;
+}
+.word{
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+.blue{
+    background-color: rgb(39, 101, 102);
+}
+.purple {
+    background-color: rgb(83, 25, 107);
+}
+.red {
+    background-color: rgb(178, 34, 34);
+}
+.contributor-count p {
+    margin-top: 1.2rem;
+    margin-left: 2rem;
+}

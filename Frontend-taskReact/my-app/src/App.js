@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import Contributors from './components/Contributors';
 import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
+import Repository from './components/Repository';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       {/* <About /> */}
       {/* <Contributors/>*/}
       {/* <UserProfile/> */}
+      <Repository/>
       <Footer/>
     </React.Fragment>
   );

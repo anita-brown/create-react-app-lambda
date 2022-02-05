@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.877);
+  color: rgba(255, 255, 255, 0.815);
+  width: auto;
+  height: 4.2rem;
+  padding: 0 4.8rem;
+  position: relative;
+}
+.navbar-list ul{
+    display: flex;
+    margin-top: 1.6rem;
+    margin-right: 10rem;
+    gap: 5rem;
+    font-weight: 600;
+    list-style: none;
+   
+}
+
+  .navbar-list a,
+  .navbar-list a:link,
+  .navbar-list a:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.856);
+    border-radius: 6px;
+    /* necessary for btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+  }
+  .navbar-list a:hover,
+  .navbar-list a:active {
+      padding: 0.4rem;
+    background-color: rgb(211, 31, 31);
+  }
+.img-nav{
+ height: 2.6rem;
+  margin-top: 0.8rem;
+  margin-left: 3rem;
+  opacity: 85%;
+}

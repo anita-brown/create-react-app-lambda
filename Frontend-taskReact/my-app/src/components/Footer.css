@@ -1,0 +1,56 @@
+.logo{
+    
+ height: 2.6rem;
+  margin-top: auto;
+  margin-left: 3rem;
+  opacity: 85%;
+
+}
+
+.footer {
+     display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.877);
+  color: rgba(255, 255, 255, 0.815);
+  width: auto;
+  height: 1rem;
+  position: relative;
+  padding: 4rem 0;
+  margin-top: 6rem;
+  border-top: 1px solid #eee;
+}
+
+.logo-col { 
+  display: flex;
+  gap: 1.2rem;
+  /* flex-direction: column; */
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #767676;
+  margin-top: auto;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+ 
+}
+/* .footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+} */

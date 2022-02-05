@@ -11,34 +11,102 @@ const UserProfile = () => {
                 </div>
 
 
-            
+
 
 
                 <div className='profile-text'>
-                        <h1 className='heading-name'>John Doe</h1>
-                        <p className='heading-username'>Jigman</p>
-                <button className='btn btn-profile'>Follow</button>
-            
+                    <h1 className='heading-name'>John Doe</h1>
+                    <p className='heading-username'>Jigman</p>
+                    <button className='btn btn-profile'>Follow</button>
+
                     <p>Full Stack Developer</p>
                     <p> Seattle, WA</p>
 
                 </div>
 
 
-             </div>
+            </div>
 
 
 
 
 
             <div className='card-profile repo'>
-                <div className='card-repo'>
-                    <p>GitHub Finder</p>
-                    <button>Public</button>
+                <h3 className='header-repo heading'>Popular repositories</h3>
+                <div className='repositories'>
+
+                    <div className='card-repo'>
+                        <div className='inner-repo'>
+
+                            <p className='header-repo'>GitHub finder</p>
+                            <div className='lang-repo'>
+                                <p className='color-repo'></p>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                    <p className='btn-repo'>Public</p>
                 </div>
 
+                    <div className='card-repo'>
+                        <div className='inner-repo'>
 
-                <button>More</button>
+                            <p className='header-repo'>GitHub finder</p>
+                            <div className='lang-repo'>
+                                <p className='color-repo'></p>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <p className='btn-repo'>Public</p>
+                    </div>
+
+                    <div className='card-repo'>
+                        <div className='inner-repo'>
+
+                            <p className='header-repo'>GitHub finder</p>
+                            <div className='lang-repo'>
+                                <p className='color-repo'></p>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <p className='btn-repo'>Public</p>
+                    </div>
+
+                    <div className='card-repo'>
+                        <div className='inner-repo'>
+
+                            <p className='header-repo'>GitHub finder</p>
+                            <div className='lang-repo'>
+                                <p className='color-repo'></p>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <p className='btn-repo'>Public</p>
+                    </div>
+                    <div className='card-repo'>
+                        <div className='inner-repo'>
+
+                            <p className='header-repo'>GitHub finder</p>
+                            <div className='lang-repo'>
+                                <p className='color-repo'></p>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <p className='btn-repo'>Public</p>
+                    </div>
+                    <div className='card-repo'>
+                        <div className='inner-repo'>
+
+                            <p className='header-repo'>GitHub finder</p>
+                            <div className='lang-repo'>
+                                <p className='color-repo'></p>
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <p className='btn-repo'>Public</p>
+                    </div>
+
+                <button className='btn'>More</button>
+                </div>
             </div>
 
 

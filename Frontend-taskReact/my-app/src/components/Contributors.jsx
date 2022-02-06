@@ -1,10 +1,11 @@
 import React from 'react'
 import './Contributors.css'
 import man from '../asset/img/man.jpeg'
+import { Link } from 'react-router-dom'
 
 const Contributors = () => {
     return (
-        <section>
+        <section id="contributors">
             <div className='contribution-header'>
                 <h1 className='header'>Contributors</h1>
                 <div>
@@ -27,16 +28,16 @@ const Contributors = () => {
             </div>
             <div className="wrapper">
                 <div className="container">
-                    <img className="img-container" src={man} alt="img"></img>
+                    <Link to="/userprofile"><img className="img-container" src={man} alt="img"></img></Link>
 
                     <div className="paragraph">
                         <h2>John Doe </h2>
                         <p>
                             <em>Jigman</em>
                         </p>
-                        <div>
+                        <Link to ="/userprofile">
                             <button className="btn">Profile</button>
-                        </div>
+                        </Link>
                     </div>
                 </div>
 

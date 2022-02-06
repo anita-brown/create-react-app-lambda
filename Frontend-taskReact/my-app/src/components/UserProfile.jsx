@@ -1,5 +1,7 @@
 import './UserProfile.css'
 import man2 from '../asset/img/man2.jpeg'
+import { Link } from "react-router-dom";
+
 const UserProfile = () => {
     return (
         <section className='user-section'>
@@ -35,7 +37,7 @@ const UserProfile = () => {
                 <h3 className='header-repo heading'>Popular repositories</h3>
                 <div className='repositories'>
 
-                    <div className='card-repo'>
+                    <Link to="/repo" className='card-repo'>
                         <div className='inner-repo'>
 
                             <p className='header-repo'>GitHub finder</p>
@@ -44,8 +46,8 @@ const UserProfile = () => {
                                 <p>Javascript</p>
                             </div>
                         </div>
-                    <p className='btn-repo'>Public</p>
-                </div>
+                        <p className='btn-repo'>Public</p>
+                    </Link>
 
                     <div className='card-repo'>
                         <div className='inner-repo'>
@@ -105,7 +107,7 @@ const UserProfile = () => {
                         <p className='btn-repo'>Public</p>
                     </div>
 
-                <button className='btn'>More</button>
+                    <button className='btn'>More</button>
                 </div>
             </div>
 

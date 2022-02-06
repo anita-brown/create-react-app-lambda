@@ -1,5 +1,6 @@
 import './Repository.css';
 import man from '../asset/img/man.jpeg'
+import { Link } from 'react-router-dom';
 
 const Repository = () => {
     return (
@@ -26,7 +27,7 @@ const Repository = () => {
 
                     <div className='card-profile box'>
                         <div className='img-profile'>
-                            <img className="img-container" src={man} alt="" />
+                            <Link to="/userprofile">  <img className="img-container" src={man} alt="" /></Link>
                             <p><span>jiglar</span> commits</p>
                         </div>
 

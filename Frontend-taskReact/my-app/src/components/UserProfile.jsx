@@ -1,8 +1,47 @@
 import './UserProfile.css'
 import man2 from '../asset/img/man2.jpeg'
+import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
+import { useCallback } from 'react'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const UserProfile = () => {
+     const [angularOrg, setangularOrg] = useState([])
+    const fetchContributors = useCallback(async () => {
+        const response = await fetch(`${process.env.REACT_APP_GITHUB_URL}/orgs/Angular`, {
+            headers: {
+                Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+            }
+        })
+        const data = await response.json()
+        console.log(data)
+         setangularOrg([data])
+      console.log(angularOrg)
+
+         }, [angularOrg]
+    )
+
+       useEffect(() => {
+        const getContributors = async () => {
+            await fetchContributors()
+        }
+
+        getContributors()
+
+    }, [])
     return (
         <section className='user-section'>
             <div className='card-profile'>
@@ -116,4 +155,4 @@ const UserProfile = () => {
     )
 }
 
-export default UserProfile
+export default UserProfile;

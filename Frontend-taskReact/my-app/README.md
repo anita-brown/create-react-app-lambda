@@ -68,3 +68,91 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+                            // const [angularOrg, setangularOrg] = useState([])
+                            // const [loading, setLoading] = useState(true)
+                            // useEffect(() => {
+                            //     fetchContributors()
+                            // }, [])
+                            // https://github.com/orgs/angular/repositories`${}`graphs/contributors
+                        
+                            //     const testing = () => {
+                            //         axios.get(`https://api.github.com/orgs/Angular`)
+                            //             .then(response => {
+                            //                 console.log(response);
+                            //             });
+                            //             }
+                            // }
+                        
+                        // const response = await fetch(`${process.env.REACT_APP_GITHUB_URL}/orgs/Angular`, {
+            //     headers: {
+                //         Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+    //     }
+    // })
+    const data = await response.json()
+    setangularOrg([data])
+    // console.log('hhgggffffddd', angularOrg)
+    // console.log("hhh", setangularOrg([data]))
+    const nextResponse = await fetch(`${process.env.REACT_APP_GITHUB_URL}/orgs/angular/repos?per_page=100`, {
+        headers: {
+            Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+        }
+    })
+    const newData = await nextResponse.json()
+
+    // console.log(Promise.all(newData), 'this is supposed to be resolved')
+    // console.log('bbb', ([newData]))    
+
+
+    //     // let result = []
+
+    const contrubutor = newData.map(async (element) => {
+        const nextNextResponse = await fetch(element.contributors_url, {
+            headers: {
+                Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+            }
+        })
+        return await nextNextResponse.json();
+    })
+
+    const allRepoContributors = await Promise.all(contrubutor)
+    let allContributors = []
+    let totalContributors = []
+
+    console.log(allRepoContributors);
+    allRepoContributors.map((element) => {
+
+        return allContributors.push(element.login)
+    })
+
+    totalContributors.push(...allContributors)
+    console.log(totalContributors)
+
+
+
+
+
+
+
+    // Promise.all(newData.map(async (element) => {
+    //     // result.push(element.contributors_url)
+
+    //     const nextNextResponse = await fetch(element.contributors_url, {
+    //         headers: {
+    //             Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
+    //         }
+    //     })
+    //     const newResult = await nextNextResponse.json()
+    //     result.push(...newResult)
+
+    // }))
+    // console.log(result)
+    // setangularOrg(result)
+    // console.log('check', setangularOrg(result)) 

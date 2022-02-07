@@ -27,7 +27,7 @@ const Repository = () => {
 
                     <div className='card-profile box'>
                         <div className='img-profile'>
-                            <Link to="/userprofile">  <img className="img-container" src={man} alt="" /></Link>
+                            <Link to="/userprofile">  <img className="img-container boxed" src={man} alt="" /></Link>
                             <p><span>jiglar</span> commits</p>
                         </div>
 
@@ -39,20 +39,19 @@ const Repository = () => {
                 </div>
 
 
-
-                <div className='card-profile img'>
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man}alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man}alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
-                    <img className='img-container' src={man} alt="" />
+                <div className='card-profile img '>
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man}alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man}alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
+                    <img className='img-container one' src={man} alt="" />
                     
                    <a className='contributor-count' href="https://github.com/angular/angular/graphs/contributors">
                     <p>+ contributors</p></a>

@@ -26,7 +26,7 @@
     font-weight: 600;
 }
 .name {
-    margin-top:2rem;
+    margin-top: 2.4rem;
 }
 .repository-flex {
     display: flex;
@@ -41,6 +41,8 @@
     margin: 1rem;;
 }
 .one {
+    width: 60px;
+    height: 60px;
 
 }
 .new{
@@ -55,8 +57,13 @@
     width: 75rem;
     height: 35rem;
 }
+.boxed {
+    width: 60px;
+    height: 60px;
+    margin-top: 1.8rem;
+}
 .img {
-    height: 35rem;
+    height: 40rem;
 }
 .lang {
     font-size: 1.3rem;

@@ -3,14 +3,14 @@ import angular from '../asset/img/angular.svg'
 
 const Footer = () => {
     return (
-        <footer class="footer">
+        <footer className="footer">
            
-                <div class="logo-col">
-                    <a href="//https:" class="footer-logo">
-                        <img class="logo" src={angular} alt="Omnifood logo" />
+                <div className="logo-col">
+                    <a href="//https:" className="footer-logo">
+                        <img className="logo" src={angular} alt="Omnifood logo" />
                     </a>
-                    <p class="copyright">
-                        Copyright &copy; <span class="year">2022</span>
+                    <p className="copyright">
+                        Copyright &copy; <span className="year">2022</span>
                     </p>
                 </div>
 

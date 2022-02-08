@@ -4,104 +4,34 @@ import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import { useCallback } from 'react'
 import Loaders from 'react-loading-icons'
-
-
-
-
-
-
-
-
-
-
-
-
+import { useLocation } from 'react-router-dom'
 
 
 
 const UserProfile = () => {
-     const [angularOrg, setangularOrg] = useState([])
+
      const [loading, setLoading] = useState(true);
+    const location = useLocation()
+  const { contributors } = location.state;
+     const [reposUrl, setRepo]= useState([])
+
+  console.log(contributors, "****");
 
     const fetchContributors = useCallback(async () => {
-        const response = await fetch(`${process.env.REACT_APP_GITHUB_URL}/orgs/Angular`, {
-            headers: {
-                Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-            }
-        })
-        const data = await response.json()
-         setangularOrg([data])
+           
 
-          const nextResponse = await fetch(`${process.env.REACT_APP_GITHUB_URL}/orgs/angular/repos?per_page=10`, {
-            headers: {
-                Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-            }
-        })
-         const newData = await nextResponse.json()
-
-            const nextNextResponse = await fetch(`${process.env.REACT_APP_GITHUB_URL}/repos/angular/angular.js/contributors`, {
-                headers: {
-                    Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-                }
-            })
-
-            const resultData = await nextNextResponse.json();
-        
-        console.log('ccc', resultData)
-
-        const repositories = resultData.map(async(element)=>{
-            const repoResponse = await fetch(element.repos_url, {
+            const repoResponse = await fetch(contributors.repos_url, {
                 headers: {
                      Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
                 }
             })
-            return await repoResponse.json();
-        })
-        console.log('bb',repositories)
-
-const allRepoContributors = await Promise.all(repositories)
-console.log('iii', allRepoContributors)
-
-
-
- const ranks = {};
-
-        allRepoContributors.forEach(repo => {
-            repo.forEach(repositories => {
-                if (!ranks[repositories.name]) {
-                    ranks[repositories.name] = {
-                        name: repositories.name,
-                        avatarUrl: repositories.owner.avatar_url,
-                        userUrl: repositories.url,
-                        contributions: repositories.contributors_url,
-                        followers: repositories.owner.followers_url,
-                        gists: repositories.owner.gists_url
-
-                    }
-                } else {
-                    ranks[repositories.name].contribution = ranks[repositories.name].contribution + repositories.contributions
-                }
-            })
-        })
-        console.log(Object.values(ranks)[0].userUrl)
-        const userPromises = Object.values(ranks).map(async (user) => {
-            const response = await fetch(user.userUrl, {
-                headers: {
-                    Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`
-                }
-            })
-            return await response.json()
-        });
-        const allUser = await Promise.all(userPromises)
-         allUser.forEach(user => {
-            ranks[user.login] = { ...ranks[user.login], name: user.name, followers: user.followers, public_repos: user.public_repos, public_gists: user.public_gists }
-        })
-
-
-
+            const data = await repoResponse.json();
+            // console.log('dddd', data)
+        console.log('bb',data)
+        setRepo(data)
       
          setLoading(false)
-         }, [angularOrg]
+         }, [reposUrl]
     )
 
        useEffect(() => {
@@ -111,116 +41,50 @@ console.log('iii', allRepoContributors)
 
         getContributors()
 
-    }, [])
+       }, [])
+    
     return (
         <section className='user-section'>
             <div className='card-profile'>
 
                 <div className='profile'>
-                    <img className='profile-img' src={man2} alt="" />
-
+                    <img className='profile-img' src={`${contributors.avatarUrl}`} alt="" />
                 </div>
-
-
-
-
 
                 <div className='profile-text'>
-                    <h1 className='heading-name'>John Doe</h1>
-                    <p className='heading-username'>Jigman</p>
+                    <h1 className='heading-name'>{`${contributors.name}`} </h1>
+                    <p className='heading-username'>{`${contributors.login}`} </p>
                     <button className='btn btn-profile'>Follow</button>
 
-                    <p>Full Stack Developer</p>
-                    <p> Seattle, WA</p>
+                    <p>Followers: {`${+contributors.followers}`} </p>
+                    <p>Contributions:{`${contributors.contribution}`} </p>
+                    <p>Public repos:{`${contributors.public_repos}`} </p>
+                    <p>Public gists:{`${contributors.public_gists}`} </p>
 
                 </div>
-
-
             </div>
 
-
-
-
-
+                {/* <h3 className='header-repo heading'>Popular repositories</h3> */}
             <div className='card-profile repo'>
-                <h3 className='header-repo heading'>Popular repositories</h3>
+                {reposUrl.length > 0 && reposUrl.map((repo) => (
+
                 <div className='repositories'>
-
-                    <Link to="/repo" className='card-repo'>
+                    <Link to={`/repo/${repo.name}`} state={{repo}}className='card-repo'>
                         <div className='inner-repo'>
-
-                            <p className='header-repo'>GitHub finder</p>
+                            <p className='header-repo'>
+                                {repo.name}
+                            </p>
                             <div className='lang-repo'>
                                 <p className='color-repo'></p>
-                                <p>Javascript</p>
+                                <p>{repo.language}</p>
                             </div>
                         </div>
                         <p className='btn-repo'>Public</p>
                     </Link>
-
-                    <div className='card-repo'>
-                        <div className='inner-repo'>
-
-                            <p className='header-repo'>GitHub finder</p>
-                            <div className='lang-repo'>
-                                <p className='color-repo'></p>
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p className='btn-repo'>Public</p>
-                    </div>
-
-                    <div className='card-repo'>
-                        <div className='inner-repo'>
-
-                            <p className='header-repo'>GitHub finder</p>
-                            <div className='lang-repo'>
-                                <p className='color-repo'></p>
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p className='btn-repo'>Public</p>
-                    </div>
-
-                    <div className='card-repo'>
-                        <div className='inner-repo'>
-
-                            <p className='header-repo'>GitHub finder</p>
-                            <div className='lang-repo'>
-                                <p className='color-repo'></p>
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p className='btn-repo'>Public</p>
-                    </div>
-                    <div className='card-repo'>
-                        <div className='inner-repo'>
-
-                            <p className='header-repo'>GitHub finder</p>
-                            <div className='lang-repo'>
-                                <p className='color-repo'></p>
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p className='btn-repo'>Public</p>
-                    </div>
-                    <div className='card-repo'>
-                        <div className='inner-repo'>
-
-                            <p className='header-repo'>GitHub finder</p>
-                            <div className='lang-repo'>
-                                <p className='color-repo'></p>
-                                <p>Javascript</p>
-                            </div>
-                        </div>
-                        <p className='btn-repo'>Public</p>
-                    </div>
-
-                    <button className='btn'>More</button>
                 </div>
+                ))}
+
             </div>
-
-
         </section>
     )
 }

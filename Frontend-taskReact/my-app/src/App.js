@@ -30,7 +30,7 @@ function App() {
 
           <Route
             exact
-            path="/userprofile"
+            path="/userprofile/:id"
             element={
               <>
                 <Navbar />
@@ -41,7 +41,7 @@ function App() {
           />
           <Route
             exact
-            path="/repo"
+            path="/repo/:id"
             element={
               <>
                 <Navbar />
@@ -56,7 +56,8 @@ function App() {
             path="/contributors"
             element={
               <>
-                <Navbar />
+                
+                 <Navbar />
                 <Contributors />
                 <Footer />
               </>

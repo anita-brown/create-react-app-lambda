@@ -1,18 +1,16 @@
-import  React from 'react';
-import './App.css';
-import Navbar from './components/Navbar'; 
-// import About from './components/About';
-import Layout from './components/Layout';
-import Contributors from './components/Contributors';
-import Footer from './components/Footer';
-import UserProfile from './components/UserProfile';
-import Repository from './components/Repository';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
+import Contributors from "./components/Contributors";
+import Footer from "./components/Footer";
+import UserProfile from "./components/UserProfile";
+import Repository from "./components/Repository";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <React.Fragment>
-   
       <Router>
         <Routes>
           <Route
@@ -34,7 +32,7 @@ function App() {
             element={
               <>
                 <Navbar />
-                <UserProfile/>
+                <UserProfile />
                 <Footer />
               </>
             }
@@ -56,14 +54,12 @@ function App() {
             path="/contributors"
             element={
               <>
-                
-                 <Navbar />
+                <Navbar />
                 <Contributors />
                 <Footer />
               </>
             }
           />
-
         </Routes>
       </Router>
     </React.Fragment>

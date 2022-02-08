@@ -1,105 +1,133 @@
-.repo-container{
-    display: flex;
-    width: auto;
-    gap: 1.1rem;
-    height: 5rem;
-    background-color: rgba(202, 201, 201, 0.952);
+.repo-container {
+  display: flex;
+  width: auto;
+  gap: 1.1rem;
+  height: 5rem;
+  background-color: rgba(202, 201, 201, 0.952);
 }
-.repo-name{
-    margin-top: 2rem;
-    margin-left: 2rem;
-    font-size: 1.8rem;
+.repo-name {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: 1.8rem;
 }
 .repo-name span {
-    font-weight: 600;
+  font-weight: 600;
 }
-.repository-flex{
-    margin-top: 2rem;
+
+.repository-flex {
+  margin-top: 2rem;
 }
-.img-profile{
-    display:flex;
-    gap: 1rem;
+
+.img-profile {
+  display: flex;
+  gap: 1rem;
+  /* justify-content: center; */
+  align-items: center;
 }
 .img-profile p {
-    margin-top: 2rem;
-    font-weight: 450;
-    font-size: 1.2rem;
+  margin-top: 2rem;
+  font-weight: 450;
+  font-size: 1.2rem;
 }
 .img-profile span {
-    font-weight: 600;
+  font-weight: 600;
+}
+.contributor-header {
+  text-align: center;
 }
 .name {
-    margin-top: 2.4rem;
+  margin-top: 2.4rem;
 }
 .repository-flex {
-    display: flex;
+  display: flex;
 }
 .heading-primary {
-    height: 0.8rem;
-    width: auto;
-    /* display: flex;
-    justify-content: space-around; */
+  height: 0.8rem;
+  width: auto;
 }
 .heading-secondary {
-    margin: 1rem;;
+  margin: 1rem;
 }
 .oned {
-    width: 8rem;
-    height: 3rem;
-    margin-top: 5rem;
-
+  width: 8rem;
+  height: 3rem;
+  margin-top: 5rem;
 }
 .two {
-      width: 8rem;
-    height: 3rem;
-    margin-left: 39rem;
+  width: 8rem;
+  height: 3rem;
+  margin-left: 39rem;
+}
+.three,
+.four {
+  width: 8rem;
+  height: 3rem;
+  margin-left: 2rem;
+}
 
+.new {
+  position: absolute;
+  left: 70%;
+  top: 28%;
 }
-.three,.four {
-        width: 8rem;
-    height: 3rem;
-    margin-left: 2rem;
-}
-
-.new{
-  
-    position: absolute;
-    left: 70%;
-    top: 28%
-}
-.box{
-    width: 75rem;
-    height: 85rem;
+.box {
+  width: 75rem;
+  height: 85rem;
 }
 .boxed {
-    width: 5rem;
-    height: 5rem;
-    margin-top: 1.9rem;
+  width: 5rem;
+  height: 5rem;
+  margin-top: 1.9rem;
 }
 .img {
-    height: 80rem;
+  height: 80rem;
 }
 .lang {
-    font-size: 1.3rem;
-    font-weight: 550;
-    margin-top: 6rem;
-    margin-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: 550;
+  margin-top: 2rem;
 }
-.word{
-    margin-top: 1.2rem;
-    font-size: 1.2rem;
-    margin-left: 2rem;
+.word {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
 }
-.blue{
-    background-color: rgb(39, 101, 102);
+.language-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.blue {
+  background-color: rgb(39, 101, 102);
 }
 .purple {
-    background-color: rgb(83, 25, 107);
+  background-color: rgb(83, 25, 107);
 }
 .red {
-    background-color: rgb(178, 34, 34);
+  background-color: rgb(178, 34, 34);
 }
 .contributor-count p {
-    margin-top: 1.2rem;
-    margin-left: 2rem;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+}
+
+.cont-repo {
+  margin-bottom: 20rem;
+}
+
+@media screen and (max-width: 500px) {
+  .repo-name {
+    font-size: 1.2rem;
+  }
+  .name {
+    margin-top: 2.2rem;
+  }
+
+  .word {
+    font-size: 0.8rem;
+  }
+
+  .lang {
+    font-size: 1rem;
+  }
 }

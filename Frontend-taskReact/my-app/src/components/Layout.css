@@ -1,57 +1,58 @@
 .layout h1 {
-    color: rgba(253, 246, 246, 0.774);
-    font-size: 2.5rem;
-    width: 90rem;
-    line-height: 1.7;
-    word-spacing: 0.2rem;
-    font-weight: 600; 
+  color: rgba(253, 246, 246, 0.774);
+  font-size: 2.5rem;
+  width: 90rem;
+  line-height: 1.7;
+  word-spacing: 0.2rem;
+  font-weight: 600;
 }
 
 .layout h1 span {
-    font-size: 3.0rem;
-    font-weight: 700;
-    color: rgba(160, 4, 4, 0.979);
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(160, 4, 4, 0.979);
 }
 
-.layout{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-	height:44rem;
-	color:#fff;
-	clip-path: polygon(0 0, 100% 0%, 100% 83%, 0 100%);
-	background:linear-gradient(rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.6)), url('../asset/img/layout.svg');
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  height: 44rem;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)),
+    url("../asset/img/layout.svg");
   text-align: center;
-	background-position:center;
+  background-position: center;
   background-size: contain;
 }
 
-  .btn-layout,
-  .btn-layout:link,
-  .btn-layout:visited {
-    padding: 1rem 3rem;
-    letter-spacing: 0.1rem;
-    border-radius: 0.3rem;
-    font-weight: 700;
-    color: rgba(253, 246, 246, 0.774);
-    background-color: rgb(211, 31, 31);
-    text-decoration: none;
-    font-size: 2rem;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.3s;
-  }
+.btn-layout,
+.btn-layout:link,
+.btn-layout:visited {
+  padding: 1rem 3rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.3rem;
+  font-weight: 700;
+  color: rgba(253, 246, 246, 0.774);
+  background-color: rgb(211, 31, 31);
+  text-decoration: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
 
-  .btn-layout:hover,
-  .btn-layout:active {
-    background-color: rgb(54, 34, 34);
-    box-shadow: inset 0 0 0 3px rgba(253, 246, 246, 0.774);
-  }
+.btn-layout:hover,
+.btn-layout:active {
+  background-color: rgb(54, 34, 34);
+  box-shadow: inset 0 0 0 3px rgba(253, 246, 246, 0.774);
+}
 
-@media screen and (max-width: 1470px){
+@media screen and (max-width: 1470px) {
   .layout h1 {
     width: 58rem;
     font-size: 2.2rem;
@@ -62,10 +63,10 @@
   .layout h1 span {
     font-size: 2.8rem;
     font-weight: 600;
-}
+  }
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 950px) {
   .layout h1 {
     width: 35rem;
     font-size: 1.8rem;
@@ -74,11 +75,11 @@
   }
 
   .layout h1 span {
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 600;
-}
+  }
 
-.btn-layout,
+  .btn-layout,
   .btn-layout:link,
   .btn-layout:visited {
     padding: 0.8rem 2.5rem;
@@ -86,7 +87,7 @@
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .layout h1 {
     width: 21rem;
     font-size: 1.2rem;
@@ -94,21 +95,21 @@
     line-height: 1.7;
   }
 
-   .layout h1 span {
+  .layout h1 span {
     font-size: 1.5rem;
     font-weight: 600;
-}
+  }
 
-.layout{
+  .layout {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 2rem;
     height: 28rem;
-}
+  }
 
-.btn-layout,
+  .btn-layout,
   .btn-layout:link,
   .btn-layout:visited {
     padding: 0.6rem 2rem;
